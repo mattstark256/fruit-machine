@@ -38,19 +38,6 @@ void Display::Draw_String(int x, int y, string s)
 }
 
 
-// This can be used to print characters above the 0-127 range.
-void Display::Draw_Char(int x, int y, int charID)
-{
-	COORD cursor_pos;
-	cursor_pos.X = x;
-	cursor_pos.Y = y;
-	SetConsoleCursorPosition(hconsole, cursor_pos);
-
-	char c = charID;
-	cout << c;
-}
-
-
 // this function sets the color of the console output
 void Display::Set_Color(int fcolor, int bcolor)
 {
@@ -85,12 +72,14 @@ void Display::Clear_Line(int line)
 }
 
 
-// This can be used to view the available characters. It's not part of the game.
+// This can be used to view available characters. It's not part of the game.
 void Display::Print_All_Chars()
 {
 	for (int y = 0, i = 0; y < SCREEN_HEIGHT; y++) {
 		for (int x = 0; x < SCREEN_WIDTH; x++, i++) {
-			Draw_Char(x, y, i);
+			char c = i;
+			string s(1, c);
+			Draw_String(x, y, s);
 			if (i > 256) return;
 		}
 	}

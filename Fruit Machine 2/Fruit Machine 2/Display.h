@@ -21,7 +21,6 @@ public:
 
 	void Init_Graphics();
 	void Draw_String(int x, int y, string s);
-	void Draw_Char(int x, int y, int charID);
 	void Set_Color(int fcolor, int bcolor = 0);
 	void Clear_Screen();
 	void Clear_Line(int line);

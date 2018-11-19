@@ -27,7 +27,7 @@ void Wheels::Draw_Wheel(int wheel_index)
 
 		display->Set_Color(0, symbol_colors[symbol]);
 		display->Draw_String(x_position - 1, wheels_y + i, " ");
-		display->Draw_Char(x_position, wheels_y + i, symbol_chars[symbol]);
+		display->Draw_String(x_position, wheels_y + i, symbol_strings[symbol]);
 		display->Draw_String(x_position + 1, wheels_y + i, " ");
 	}
 }

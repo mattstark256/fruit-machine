@@ -34,8 +34,8 @@ private:
 		{ 4, 6, 2, 3, 1, 0, 7, 5 },
 		{ 7, 3, 5, 0, 4, 2, 1, 6 }
 	};
-	// These are the character indexes for the symbols
-	int symbol_chars[SYMBOL_COUNT]{ 55, 63, 64, 88, 157, 190, 207, 245 };
+	// These are the octal values for the symbols
+	string symbol_strings[SYMBOL_COUNT]{ "\67", "\77", "\100", "\130", "\235", "\276", "\317", "\365" };
 	// These are the corresponding colors
 	int symbol_colors[SYMBOL_COUNT]{ 10, 14, 15, 13, 11, 12, 8, 9 };
 	Display* display;
